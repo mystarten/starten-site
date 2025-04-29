@@ -820,13 +820,29 @@ canvas {
 }
 
 /* Responsive design pour petits écrans */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
+@media screen and (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
     }
     
-    .founder-image {
-        flex: 0 0 100%;
+    .brand-title {
+        font-size: 3rem !important; /* Réduit encore plus la taille du titre sur très petits écrans */
+    }
+    
+    .slogan {
+        font-size: 1rem !important;
+    }
+    
+    .header {
+        padding: 10px 15px !important;
+    }
+    
+    /* Amélioration pour les cartes de prix et projets */
+    .pricing-card, .project {
+        max-width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
