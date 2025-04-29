@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTEN - Le web plus simplement</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="interne/logo/flavicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+        <div class="bg-line line-1"></div>
+        <div class="bg-line line-2"></div>
+        <div class="bg-line line-3"></div>
+    </div>
+
+    <!-- Canvas pour les animations 3D -->
+    <canvas id="threeCanvas"></canvas>
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- MENU FIXE -->
+    <header class="header">
+        <div class="logo">STARTEN</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#realisations">Nos réalisations</a></li>
+                <li><a href="#offres">Offres</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ACCUEIL -->
+    <section id="accueil">
+        <div class="title-container">
+            <h1 class="brand-title">STARTEN</h1>
+            <div class="electric-container">
+                <div class="electric-effect"></div>
+            </div>
+            <h1 class="slogan">
+                <span class="slogan-part1">Le web,</span> <span class="slogan-part2">plus simplement</span>
+              </h1>
+            
+        </div>
+        
+        <div class="scroll-indicator">
+            <p>Découvrez nos réalisations</p>
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOS RÉALISATIONS -->
+    <section id="realisations">
+        <h2 class="section-title">Parmis nos réalisations</h2>
+        
+        <div class="projects-container">
+            <div class="project">
+                <div class="project-header">
+                    <h3>Les Délices de Coings</h3>
+                    <div class="project-tag">Confiserie artisanale</div>
+                </div>
+                
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <img src="images/delices-coings.jpg" alt="Les Délices de Coings" class="main-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                
+                <div class="project-features">
+                    <ul>
+                        <li>Site chaleureux et traditionnel</li>
+                        <li>Esthétique artisanale soignée</li>
+                        <li>Boutique en ligne complète</li>
+                        <li>Interface intuitive pour les commandes</li>
+                        <li>Section recettes et histoire du terroir</li>
+                    </ul>
+                </div>
+                
+                <a href="#" class="view-project">Voir le projet</a>
+            </div>
+            
+            <div class="project">
+                <div class="project-header">
+                    <h3>Sakura</h3>
+                    <div class="project-tag">Restaurant japonais à Eaubonne</div>
+                </div>
+                
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <img src="images/sakura.jpg" alt="Restaurant Sakura" class="main-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                
+                <div class="project-features">
+                    <ul>
+                        <li>Site vitrine élégant et minimaliste</li>
+                        <li>Système de commandes à emporter</li>
+                        <li>Réservation de table en ligne</li>
+                        <li>Menu interactif avec descriptions</li>
+                        <li>Interface bilingue français/japonais</li>
+                    </ul>
+                </div>
+                
+                <a href="#" class="view-project">Voir le projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFRES -->
+    <section id="offres">
+        <h2 class="section-title">Nos offres</h2>
+        
+        <div class="pricing-cards">
+            <div class="pricing-card starter">
+                <div class="card-glow"></div>
+                <h3>Starter</h3>
+                <div class="price">110 €</div>
+                <ul class="features">
+                    <li>Site vitrine 1-3 pages</li>
+                    <li>Design responsive</li>
+                    <li>Animations légères</li>
+                    <li>Référencement de base</li>
+                    <li>Support 1 mois</li>
+                </ul>
+                <a href="#devis" class="card-cta">Choisir</a>
+            </div>
+            
+            <div class="pricing-card essential">
+                <div class="card-electric"></div>
+                <h3>Essentiel</h3>
+                <div class="price">180 €</div>
+                <ul class="features">
+                    <li>Site vitrine jusqu'à 5 pages</li>
+                    <li>E-commerce basique (10 produits)</li>
+                    <li>Animations avancées</li>
+                    <li>SEO optimisé</li>
+                    <li>Support 3 mois</li>
+                </ul>
+                <a href="#devis" class="card-cta">Choisir</a>
+            </div>
+            
+            <div class="pricing-card gold">
+                <div class="card-gold-glow"></div>
+                <div class="gold-badge">Premium</div>
+                <h3>Gold</h3>
+                <div class="price">220 €</div>
+                <ul class="features">
+                    <li>Site complet illimité</li>
+                    <li>E-commerce avancé</li>
+                    <li>Animations 3D personnalisées</li>
+                    <li>SEO professionnel</li>
+                    <li>Support 6 mois prioritaire</li>
+                </ul>
+                <a href="#devis" class="card-cta">Choisir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- À PROPOS -->
+<section id="apropos">
+    <h2 class="section-title">À propos</h2>
+    
+    <div class="about-container">
+        <div class="founder-image">
+            <div class="image-placeholder">
+                <div class="image-frame">
+                    <img src="images/fondateur.jpg" alt="Fondateur de STARTEN">
+                </div>
+            </div>
+        </div>
+        
+        <div class="founder-quote">
+            <div class="quote-marks">"</div>
+            <p>"À 13 ans, je rêvais déjà de créer des sites web uniques, qui reflètent pleinement une vision. Aujourd'hui, ce rêve est devenu une compétence. Mon ambition désormais : aider ceux qui, comme moi, veulent transformer leurs idées en projets concrets et bâtir leur présence en ligne, à leur image..."</p>
+            <p class="quote-author">Mats Serre-Gehri - Fondateur de STARTEN</p>
+        </div>
+    </div>
+</section>
+
+    <!-- DEVIS -->
+    <section id="devis">
+        <h2 class="section-title">Devis personnalisé</h2>
+        
+        <div class="devis-container">
+            <button class="cta-button" id="devisButton">
+                <span>Mon devis offert</span>
+                <div class="button-glow"></div>
+            </button>
+            
+            <div class="devis-info">
+                <p>Pour obtenir votre devis personnalisé, envoyez-nous un email à <strong>starten.contact@gmail.com</strong> avec les informations suivantes :</p>
+                
+                <div class="devis-checklist">
+                    <div class="checklist-item">
+                        <div class="check-icon"></div>
+                        <p>Type de site souhaité (vitrine, e-commerce, blog, etc.)</p>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="check-icon"></div>
+                        <p>Des exemples de sites dont vous aimez le design</p>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="check-icon"></div>
+                        <p>Fonctionnalités spécifiques que vous souhaitez inclure</p>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="check-icon"></div>
+                        <p>Votre budget approximatif et délai souhaité</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="devisModal">
+            <div class="modal-content">
+                <span class="close-modal"></span>
+                <h3>Demande de devis gratuit</h3>
+                <form id="devisForm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="details">Détails du projet</label>
+                        <textarea id="details" class="form-textarea" placeholder="Objectif du site, exemples de sites inspirants, fonctionnalités souhaitées, budget approximatif..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <span>Envoyer ma demande</span>
+                        <div class="button-shine"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon email-icon"></div>
+                    <p>starten.contact@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon phone-icon"></div>
+                    <p>+33 7 69 88 83 85</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon location-icon"></div>
+                    <p>Val D'Oise, France</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <div class="social-icon instagram"></div>
+                </a>
+                <a href="#" class="social-link">
+                    <div class="social-icon linkedin"></div>
+                </a>
+                <a href="#" class="social-link">
+                    <div class="social-icon github"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">STARTEN</div>
+            <p class="footer-copyright">&copy; 2025 STARTEN - Le web, plus simplement - Par Mats Serre-Gehri</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
